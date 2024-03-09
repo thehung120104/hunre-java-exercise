@@ -3,10 +3,6 @@ package exercise.oop;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author ThanhBuiNguyen
- * @since 09/03/2024
- */
 public class Course {
 
     private Input input = new Input();

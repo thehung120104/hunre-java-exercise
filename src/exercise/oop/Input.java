@@ -2,10 +2,6 @@ package exercise.oop;
 
 import java.util.Scanner;
 
-/**
- * @author ThanhBuiNguyen
- * @since 09/03/2024
- */
 public class Input {
     // syntax - cu phap: access modifier: private, public, protected
     //    // return type - kieu du lieu tra ve: void - khong tra ve gi ca, Data type - Kieu du lieu: int, float, String

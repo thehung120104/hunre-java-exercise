@@ -1,9 +1,5 @@
 package exercise.oop;
 
-/**
- * @author ThanhBuiNguyen
- * @since 09/03/2024
- */
 public class Student {
     // Doi tuong sinh vien:
     // Thuoc tinh: ho ten, ngay sinh, mon hoc 1,2,3 diem mon 1,2,3
