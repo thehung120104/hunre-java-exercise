@@ -54,7 +54,7 @@ public class Student {
     public Student() {
     }
 
-    public String hienthi() {
+    public String hienthi() { // Ham instance - Ham Doi tuong
         return "Student{" +
             "name='" + name + '\'' +
             ", birthDate='" + birthDate + '\'' +
@@ -65,12 +65,68 @@ public class Student {
             '}';
     }
 
-    public static void main(String[] args) {
-        //Student hung = new Student();
-        Student hung = new Student("Nguyen The Hung", "12/01/2004", "toan", "van", 10, 9);
-        char c = 'c';
-        System.out.println("1:" + hung.hienthi());
+    public void tradiem1() {
+        String s = "diem mon thu 1:" + subject1Grade;
+        System.out.println(s);
     }
 
+    public void tradiem2() {
+        String s = "diem mon thu 2:" + subject2Grade;
+        System.out.println(s);
+    }
+
+    public void setName(String name, String ngaySInh) { // Ham doi tuong: thiet lap ten cho Student - khong tra ve
+        this.name = name;
+    }
+
+
+    public static void main(String[] args) { // Ham Class - Ham static
+        /*
+        Student hung = new Student("Nguyen The Hung", "12/01/2004", "toan", "van", 10, 9);
+        Student khanh = new Student("Nguyen The Khanh", "12/01/2006", "toan", "van", 10, 9);
+
+        System.out.println("1:" + hung.hienthi());
+        hung.tradiem1();
+        hung.tradiem2();
+        System.out.println("2:" + khanh.hienthi());
+        khanh.tradiem1();
+        khanh.tradiem2();*/
+
+
+        Input huy = new Input();
+
+        System.out.println("Nhap ho va ten:");
+        String hoTen = huy.inputString();
+
+        System.out.println("Nhap ngay sinh:");
+        String ngaySinh = huy.inputString();
+
+        System.out.println("Nhap mon hoc 1:");
+        String monHoc1 = huy.inputString();
+
+        System.out.println("Nhap mon hoc 2:");
+        String monHoc2 = huy.inputString();
+
+        System.out.println("Nhap diem mon hoc 1:");
+        Float diemMon1 = huy.inputfloat();
+
+        System.out.println("Nhap diem mon hoc 2:");
+        Float diemMon2 = huy.inputfloat();
+
+        Student hung = new Student();
+        hung.name = hoTen;
+        hung.birthDate = ngaySinh;
+        hung.subject1 = monHoc1;
+        hung.subject2 = monHoc2;
+        hung.subject1Grade = diemMon1;
+        hung.subject2Grade = diemMon2;
+        System.out.println(hung.hienthi());
+        hung.tradiem1();
+        hung.tradiem2();
+
+        System.out.println(hung.subject1Grade);
+        float diemTB = (hung.subject1Grade + hung.subject2Grade) / 2;
+        System.out.println("Diem TB: " + diemTB);
+    }
 
 }
